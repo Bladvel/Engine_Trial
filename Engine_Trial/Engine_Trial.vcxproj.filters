@@ -21,10 +21,10 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\EngineTrial\EngineTrial\Animator.h">
+    <ClInclude Include="Animator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\EngineTrial\EngineTrial\PackageManager.h">
+    <ClInclude Include="PackageManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClCompile Include="Engine_Trial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\EngineTrial\EngineTrial\Animator.cpp">
+    <ClCompile Include="Animator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\EngineTrial\EngineTrial\PackageManager.cpp">
+    <ClCompile Include="PackageManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
