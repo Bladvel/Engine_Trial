@@ -4,9 +4,18 @@
 #include <allegro5\allegro.h>
 #include <allegro5\allegro_image.h>
 
+/*A package and its manager are classes meant to 
+help with asset handling.
+Rigth now it lacks support for:
+
+Sound
+Video
+Texture Atlas
+
+*/
 class Package {
 public:
-	std::string Type;
+	std::string Type;//Will be used when we introduce other package types
 	std::string Name;
 	std::vector<std::string> Directory;
 

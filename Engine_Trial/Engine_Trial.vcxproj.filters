@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{47ed94b0-a5fd-428d-a35f-a175d3b6f693}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -44,5 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Rocks0.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Rocks1.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Rocks2.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Rocks3.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="Rocks4.png">
+      <Filter>Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>
