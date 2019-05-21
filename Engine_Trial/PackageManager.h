@@ -35,7 +35,7 @@ public:
 
 	~PackageManager() {};
 
-	void AddPackage(std::string Name, std::string Type, int Package_Qtty, std::vector<std::string> Data);
+	void AddPackage(std::string Name, std::string Type, int Package_Qtty, std::vector<std::string> ArchiveName);
 
 	std::vector<ALLEGRO_BITMAP*> UnpackImage(std::string PackageName);
 
