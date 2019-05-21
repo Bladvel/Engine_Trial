@@ -55,10 +55,6 @@ void Animator::SetAnimationSpeed(int TargetSpeed){
 /*About Animate to and AnimateLoop, since its kinda messy I've consedered 
 splitting the core logic into sub functions, yet I also think it would be unnecessary*/
 
-/*The two Higlighted section in Animate are meant to fix the problem when it is going
-backwards and State = 0, in the code that would leave State = -1 and that would not be fixed
-until the next call. As I couldn't think of an elegant solution here it is. 
-fell free to fix it*/
 
 void Animator::AnimateTo(int TargetState, bool Backward) {
 	int Direction;
@@ -72,27 +68,22 @@ void Animator::AnimateTo(int TargetState, bool Backward) {
 		BuildUp += 1 * Speed;
 	}
 	else {
-		if (State < Sprite.size() && State >= 0) {
+		if (State != TargetState) {
 			State += Direction;
 			BuildUp = 0;
-		}
-		else if (State != TargetState) {
-			Reset();
-			BuildUp = 0;
-		}
-	}
-/*********************************************/
-	if (State > Sprite.size()) {
-		State = Sprite.size();
-	}
 
-	if (State < 0) {
-		State = 0;
+			if (State < 0 && Direction < 0) {
+				State = Sprite.size() - 1;
+			}
+			else if (State > Sprite.size() - 1 && Direction > 0) {
+				Reset();
+			}
+		}
+
 	}
-/*********************************************/
 }
 
-void Animator::AnimateLoop(int From, int TargetState, bool Backward) {
+void Animator::AnimateLoop(bool Backward) {
 	int Direction;
 
 	if (Backward)
@@ -104,25 +95,16 @@ void Animator::AnimateLoop(int From, int TargetState, bool Backward) {
 		BuildUp += 1 * Speed;
 	}
 	else {
-		if (State < Sprite.size() && State >= 0) {
-			State += Direction;
-			BuildUp = 0;
+		State += Direction;
+		BuildUp = 0;
+
+		if (State < 0 && Direction < 0) {
+			State = Sprite.size() - 1;
 		}
-		else{
+		else if (State > Sprite.size() - 1 && Direction > 0) {
 			Reset();
-			BuildUp = 0;
 		}
 	}
-
-/*********************************************/
-	if (State > Sprite.size()) {
-		State = Sprite.size();
-	}
-
-	if (State < 0) {
-		State = 0;
-	}
-/*********************************************/
 }
 
 

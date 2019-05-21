@@ -32,6 +32,6 @@ public:
 
 	void AnimateTo(int TargetState, bool Backward);
 
-	void AnimateLoop(int From, int TargetState, bool Backward);
+	void AnimateLoop(bool Backward);
 };
 
