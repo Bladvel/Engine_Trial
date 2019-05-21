@@ -2,9 +2,9 @@
 #include "PackageManager.h"
 
 
-void PackageManager::AddPackage(std::string Name, std::string Type, int Package_Qtty, std::vector<std::string> Data) {
+void PackageManager::AddPackage(std::string Name, std::string Type, int Package_Qtty, std::vector<std::string> ArchiveName) {
 		
-		Wrapped.push_back (Package(Name, Type, Package_Qtty, Data));
+		Wrapped.push_back (Package(Name, Type, Package_Qtty, ArchiveName));
 		//std::cout << Wrapped[0].Directory[1] << std::endl;
 }
 
